@@ -3,7 +3,7 @@ public class pawn extends subpiece implements piece{
     public pawn(int x, int y) {
         super(x, y);
     }
-
+// fix to account for both player "first jump"
     public boolean inStartPos(){
         return getY() == 2;
     }

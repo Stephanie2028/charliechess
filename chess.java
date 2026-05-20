@@ -1,4 +1,8 @@
 public class chess {
+// account edge case
+// finish main - wturn, bturn, update display 
+// en passant + promoting pawn + castle 
+// other special moves?
     space[][] board = new space[8][8];
     private boolean whiteWin = false;
     private boolean blackWin = false;
@@ -56,9 +60,6 @@ public class chess {
         }
     }
 
-    public int translate(){
-        
-    }
 
     
 }
