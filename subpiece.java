@@ -1,6 +1,6 @@
 public class subpiece {
     private int x;
-    protected int y; 
+    private int y; 
 
     public subpiece(int x, int y){
         this.x = x;

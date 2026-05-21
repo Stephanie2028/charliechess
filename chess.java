@@ -1,11 +1,15 @@
+
+import java.util.Scanner;
+
 public class chess {
 // account edge case
 // finish main - wturn, bturn, update display 
 // en passant + promoting pawn + castle 
-// other special moves?
     space[][] board = new space[8][8];
     private boolean whiteWin = false;
     private boolean blackWin = false;
+
+    Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         chess game = new chess();
@@ -13,6 +17,15 @@ public class chess {
         game.printBoard(board);
 
         while(!game.whiteWin && !game.blackWin) {
+            System.out.println("WHITE TURN");
+            System.out.println("piece to move:");
+            String wMovingPiece = game.sc.nextLine();
+            System.out.println("(letter(space)number) Space to move " + wMovingPiece + " to:");
+            String wMovingSpot = game.sc.nextLine();
+            System.out.println(translateY(wMovingSpot));;
+            System.out.println(translateX(wMovingSpot));
+ 
+            
 
         }
     }
@@ -59,6 +72,17 @@ public class chess {
                 
         }
     }
+// use char at -a -1 
+    public static int translateX(String s){
+        s = s.toLowerCase();
+        return s.charAt(0) - 'a'; 
+
+    }
+    public static int translateY(String s){
+        return s.charAt(2) - '1';
+        
+    }
+    
 
 
     
