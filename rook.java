@@ -1,4 +1,6 @@
-public class rook extends subpiece implements piece{
+public class rook extends piece{
+
+
     public rook(int x, int y) {
         super(x, y);
     }

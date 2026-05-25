@@ -15,15 +15,22 @@ public class chess {
         chess game = new chess();
         space[][] board = game.display(game.board);
         game.printBoard(board);
-
+        
+// if (piece instanceof pawn)
         while(!game.whiteWin && !game.blackWin) {
             System.out.println("WHITE TURN");
             System.out.println("piece to move:");
             String wMovingPiece = game.sc.nextLine();
             System.out.println("(letter(space)number) Space to move " + wMovingPiece + " to:");
             String wMovingSpot = game.sc.nextLine();
-            System.out.println(translateY(wMovingSpot));;
-            System.out.println(translateX(wMovingSpot));
+            if(pieceChose(wMovingPiece).canMove(translateX(wMovingSpot),translateY(wMovingSpot))){
+                
+                if(board[translateX(wMovingSpot)][translateY(wMovingSpot)].containsPiece()){
+                    System.out.println(board[translateX(wMovingSpot)][translateY(wMovingSpot)] + "taken");
+                }
+                piece.updatePos();
+
+            }
  
             
 
@@ -82,6 +89,7 @@ public class chess {
         return s.charAt(2) - '1';
         
     }
+
     
 
 

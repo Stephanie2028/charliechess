@@ -1,4 +1,5 @@
-public class bishop extends subpiece implements piece{
+public class bishop extends piece{
+
     public bishop(int x, int y) {
         super(x, y);
     }

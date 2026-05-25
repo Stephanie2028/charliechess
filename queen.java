@@ -1,4 +1,5 @@
-public class queen extends subpiece implements  piece{
+public class queen extends piece{
+
     public queen(int x, int y) {
         super(x, y);
     }

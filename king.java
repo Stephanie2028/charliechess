@@ -1,9 +1,11 @@
-public class king extends subpiece implements piece{
+public class king extends piece{
+
 
     public king(int x, int y) {
-        super(x, y);
-    }
-// diagonal
+            super(x, y);
+        }
+
+    // diagonal
     @Override
     public boolean canMove(int x, int y){
         if(y == getY()){

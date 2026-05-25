@@ -1,4 +1,5 @@
 public class subpiece {
+    
     private int x;
     private int y; 
 
